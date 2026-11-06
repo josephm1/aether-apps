@@ -2,6 +2,21 @@
 
 An independently installable Aether extension. Example apps live in [aether-webapps](https://github.com/josephm1/aether-webapps). Native host support is developed in [aether-host-support](https://github.com/josephm1/aether-host-support), and is not yet part of upstream Aether.
 
+## A hosted app in use
+
+The extension lets an editable project run as its own Android app window. Here,
+StoryLab uses a Wikipedia article to present a historical learning decision. These
+are actual device captures of the hosted app, not the project manager UI. The app
+source lives separately in [aether-webapps](https://github.com/josephm1/aether-webapps).
+
+<p><img src="docs/screenshots/storylab-source-android.png" width="280" alt="A Wikipedia source opened in hosted StoryLab"><img src="docs/screenshots/storylab-decision-android.png" width="280" alt="A generated historical decision in the hosted StoryLab window"></p>
+
+A typical workflow is: import the project ZIP in Apps, review access, open it, add
+source material, then use the app. No per-app APK or additional provider login is
+needed. These captures demonstrate Android hosting; iOS hosting remains unimplemented.
+
+## Install and run
+
 Requires Node 22+. Run `npm test`, then `python3 package.py` to produce the extension ZIP in `dist/`. Import it through Aether’s extension manager. Native hosting currently requires the Android host-support branch; iOS hosting is not implemented.
 Normal Android flow: choose a shared WebApps folder once, create or import a project,
 review its requested access, then **Grant access and open**. Later use **Open** or its
