@@ -1,0 +1,33 @@
+{
+  "name": "aether-apps",
+  "version": "1.5.6",
+  "description": "Generic Apps manager with shared editable projects/data, optional native hosting and scoped extension capabilities.",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "pi": {
+    "extensions": [
+      "./agent.mjs"
+    ]
+  },
+  "aether": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "extensions": [
+      "./aether.mjs"
+    ]
+  },
+  "scripts": {
+    "check": "node check.mjs",
+    "package": "python3 package.py",
+    "test": "node check.mjs && node --test tests/test-*.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josephm1/aether-apps.git"
+  }
+}
